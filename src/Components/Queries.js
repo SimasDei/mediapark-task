@@ -5,7 +5,8 @@ export class Queries extends Component {
   render() {
     return (
       <div className="queries__container item">
-        <p>Queries Component</p>
+        <Query />
+        <Query />
         <Query />
       </div>
     );

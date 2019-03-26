@@ -2,8 +2,9 @@ import React from 'react';
 
 const Query = () => {
   return (
-    <div>
-      <p>Query Component</p>
+    <div className="query__container">
+      <p>Saved Search Term</p>
+      <button className="query__button">Search</button>
     </div>
   );
 };

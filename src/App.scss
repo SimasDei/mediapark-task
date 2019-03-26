@@ -14,12 +14,11 @@ body {
     display: grid;
     max-width: calc(100vw - 10%);
     margin: 0 auto;
-    grid-template-rows: 1fr 2fr;
+    padding-top: 5%;
+    grid-template-rows: auto auto;
     grid-template-columns: 2fr 1fr;
 
     .item {
-      background: #373142;
-      color: #fff;
       text-align: center;
       margin: 1rem;
 
@@ -29,9 +28,8 @@ body {
       }
     }
     .search__container {
-      min-height: 100px;
-
       .search__form {
+        align-items: center;
         margin: auto 0;
         height: 100%;
         display: grid;
@@ -43,6 +41,68 @@ body {
             height: 30px;
             border-radius: 1.5rem;
             margin: auto 0;
+          }
+        }
+        .search__buttons {
+          .search__button {
+            padding: 1rem;
+            margin: 0.5rem;
+            background-color: #007991;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 600;
+            border-radius: 0.5rem;
+            border: none;
+            &:hover,
+            &:active {
+              background-color: #fff;
+              color: #007991;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+
+    .images__container {
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1fr;
+      grid-gap: 2rem;
+
+      .image__container {
+        .image__img {
+          width: 100%;
+        }
+      }
+    }
+
+    .queries__container {
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 1.5rem;
+      .query__container {
+        background: rgba(255, 255, 255, 0.5);
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+
+        .query__button {
+          padding: 0.5rem;
+          background-color: #3d808d;
+          color: #fff;
+          text-transform: uppercase;
+          font-weight: 600;
+          border-radius: 0.5rem;
+          border: none;
+
+          &:hover,
+          &:active {
+            background-color: #fff;
+            color: #3d808d;
+            cursor: pointer;
           }
         }
       }

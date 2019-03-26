@@ -5,7 +5,13 @@ export class Images extends Component {
   render() {
     return (
       <div className="images__container item">
-        <p>Images Component</p>
+        <Image />
+        <Image />
+        <Image />
+        <Image />
+        <Image />
+        <Image />
+        <Image />
         <Image />
       </div>
     );
