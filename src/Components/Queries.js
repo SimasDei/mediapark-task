@@ -4,7 +4,7 @@ import Query from './Query';
 export class Queries extends Component {
   render() {
     return (
-      <div>
+      <div className="queries__container item">
         <p>Queries Component</p>
         <Query />
       </div>
