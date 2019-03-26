@@ -41,6 +41,7 @@ body {
             height: 30px;
             border-radius: 1.5rem;
             margin: auto 0;
+            padding: 0.5rem 0 0.5rem 1rem;
           }
         }
         .search__buttons {
@@ -71,7 +72,7 @@ body {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: 1fr;
-      grid-gap: 2rem;
+      grid-gap: 1rem;
 
       .image__container {
         .image__img {

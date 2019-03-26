@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
 
 export class Search extends Component {
+  handleSubmit = e => {
+    e.preventDefault();
+    const searchTerm = this.refs.search.value;
+
+    console.log(searchTerm);
+  };
   render() {
     return (
       <div className="search__container item">
-        <form className="search__form">
+        <form className="search__form" onSubmit={this.handleSubmit}>
           <div className="search__field">
             <label htmlFor="search">
               <input
@@ -13,6 +19,7 @@ export class Search extends Component {
                 id="search"
                 name="search"
                 placeholder="Search for an Image"
+                ref="search"
               />
             </label>
           </div>
