@@ -1,29 +1,29 @@
 import React, { Component } from 'react';
-import unsplashAPI from '../config';
-import axios from 'axios';
+import { connect } from 'react-redux';
+import { getImages } from '../actions/imageActions';
 import Image from './Image';
+// import image from '../assets/dog.jpg';
 
 export class Images extends Component {
-  state = {
-    images: []
-  };
   componentWillMount() {
-    const { SECRET_KEY, ACCESS_KEY, API_ROOT } = unsplashAPI;
-    axios
-      .get(`${API_ROOT}/photos/?client_id=${ACCESS_KEY}`)
-      .then(res => {
-        // const imgLink = res.data.urls.regular;
-        const imgLink = res.data.map(img => img.urls.regular);
-        this.setState({ images: imgLink });
-      })
-      .catch(err => console.log(err));
+    this.props.getImages();
   }
 
-  renderImages = () =>
-    this.state.images.map(image => <Image url={image} key={image} />);
+  renderImages = () => {
+    const { images } = this.props.images;
+    return images.map(image => <Image key={image} url={image} />);
+  };
+
   render() {
     return <div className="images__container item">{this.renderImages()}</div>;
   }
 }
 
-export default Images;
+const mapStateToProps = state => ({
+  images: state.images
+});
+
+export default connect(
+  mapStateToProps,
+  { getImages }
+)(Images);
