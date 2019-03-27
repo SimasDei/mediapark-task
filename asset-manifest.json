@@ -1,13 +1,13 @@
 {
-  "main.css": "/static/css/main.922327e1.chunk.css",
-  "main.js": "/static/js/main.87f6b573.chunk.js",
-  "main.js.map": "/static/js/main.87f6b573.chunk.js.map",
-  "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
-  "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-  "static/js/2.13ecabd2.chunk.js": "/static/js/2.13ecabd2.chunk.js",
-  "static/js/2.13ecabd2.chunk.js.map": "/static/js/2.13ecabd2.chunk.js.map",
-  "index.html": "/index.html",
-  "precache-manifest.e8507b67522c02c96b114611aa15ca26.js": "/precache-manifest.e8507b67522c02c96b114611aa15ca26.js",
-  "service-worker.js": "/service-worker.js",
-  "static/css/main.922327e1.chunk.css.map": "/static/css/main.922327e1.chunk.css.map"
+  "main.css": "/mediapark-task/static/css/main.922327e1.chunk.css",
+  "main.js": "/mediapark-task/static/js/main.e4287672.chunk.js",
+  "main.js.map": "/mediapark-task/static/js/main.e4287672.chunk.js.map",
+  "runtime~main.js": "/mediapark-task/static/js/runtime~main.ad1294d5.js",
+  "runtime~main.js.map": "/mediapark-task/static/js/runtime~main.ad1294d5.js.map",
+  "static/js/2.13ecabd2.chunk.js": "/mediapark-task/static/js/2.13ecabd2.chunk.js",
+  "static/js/2.13ecabd2.chunk.js.map": "/mediapark-task/static/js/2.13ecabd2.chunk.js.map",
+  "index.html": "/mediapark-task/index.html",
+  "precache-manifest.a8a111547e589e2671f3ab1fee27247f.js": "/mediapark-task/precache-manifest.a8a111547e589e2671f3ab1fee27247f.js",
+  "service-worker.js": "/mediapark-task/service-worker.js",
+  "static/css/main.922327e1.chunk.css.map": "/mediapark-task/static/css/main.922327e1.chunk.css.map"
 }
