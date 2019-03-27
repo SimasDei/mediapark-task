@@ -8,7 +8,7 @@ html {
 body {
   min-height: 100vh;
   font-size: 16px;
-  background: linear-gradient(to top, #007991, #78ffd6);
+  background: linear-gradient(to top, #ff4b1f, #ff9068);
 
   .container {
     display: grid;
@@ -48,7 +48,7 @@ body {
           .search__button {
             padding: 1rem;
             margin: 0.5rem;
-            background-color: #007991;
+            background-color: #ff4b1f;
             color: #fff;
             text-transform: uppercase;
             font-weight: 600;
@@ -57,7 +57,7 @@ body {
             &:hover,
             &:active {
               background-color: #fff;
-              color: #007991;
+              color: #ff4b1f;
               cursor: pointer;
             }
           }
@@ -97,7 +97,7 @@ body {
 
         .query__button {
           padding: 0.5rem;
-          background-color: #3d808d;
+          background-color: #ff4b1f;
           color: #fff;
           text-transform: uppercase;
           font-weight: 600;
@@ -107,7 +107,7 @@ body {
           &:hover,
           &:active {
             background-color: #fff;
-            color: #3d808d;
+            color: #ff4b1f;
             cursor: pointer;
           }
         }
