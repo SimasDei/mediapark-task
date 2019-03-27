@@ -6,12 +6,15 @@ import Image from './Image';
 
 export class Images extends Component {
   componentWillMount() {
-    this.props.getImages();
+    console.log(this.props.images);
+    // this.props.getImages(this.props.images);
   }
 
   renderImages = () => {
-    const { images } = this.props.images;
-    return images.map(image => <Image key={image} url={image} />);
+    const { images, queries } = this.props.images;
+    if (images.imgUrl) {
+      return images.imgUrl.map(image => <Image key={image} url={image} />);
+    }
   };
 
   render() {

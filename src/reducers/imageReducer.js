@@ -1,4 +1,4 @@
-import { GET_IMAGES } from '../actions/types';
+import { GET_IMAGES, SEARCH_TERM } from '../actions/types';
 
 const initialState = {
   searchTerm: 'cats',
@@ -13,7 +13,11 @@ export default function(state = initialState, action) {
         ...state,
         images: action.payload
       };
-
+    case SEARCH_TERM:
+      return {
+        ...state,
+        queries: action.payload
+      };
     default:
       return state;
   }

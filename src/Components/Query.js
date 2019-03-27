@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Query = () => {
+const Query = props => {
   return (
     <div className="query__container">
-      <p>Saved Search Term</p>
+      <p>{props.query}</p>
       <button className="query__button">Search</button>
     </div>
   );

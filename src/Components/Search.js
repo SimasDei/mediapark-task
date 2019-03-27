@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { searchTerm, getImages } from '../actions/imageActions';
 
 export class Search extends Component {
   handleSubmit = e => {
     e.preventDefault();
     const searchTerm = this.refs.search.value;
-
-    console.log(searchTerm);
+    this.props.images.searchTerm = searchTerm;
+    this.props.getImages(this.props.images);
+    console.log(this.props.images.searchTerm);
   };
   render() {
     return (
@@ -37,4 +40,11 @@ export class Search extends Component {
   }
 }
 
-export default Search;
+const mapStateToProps = state => ({
+  images: state.images
+});
+
+export default connect(
+  mapStateToProps,
+  { searchTerm, getImages }
+)(Search);

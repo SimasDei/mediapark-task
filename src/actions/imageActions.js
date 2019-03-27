@@ -2,19 +2,28 @@ import axios from 'axios';
 import { GET_IMAGES, SEARCH_TERM } from './types';
 import unsplashAPI from '../config';
 
-export const getImages = (query = 'cats') => dispatch => {
+export const getImages = state => dispatch => {
   const { ACCESS_KEY, API_ROOT } = unsplashAPI;
+  const query = state.searchTerm;
+  console.log(query);
   axios
     .get(
       `${API_ROOT}/photos/random/?client_id=${ACCESS_KEY}&query=${query}&count=20`
     )
     .then(res => {
-      console.log(res.data);
+      // console.log(res.data);
       const imgUrl = res.data.map(img => img.urls.regular);
       dispatch({
         type: GET_IMAGES,
-        payload: imgUrl
+        payload: { imgUrl }
       });
     })
     .catch(err => console.log(err));
+};
+
+export const searchTerm = query => dispatch => {
+  dispatch({
+    type: SEARCH_TERM,
+    payload: query
+  });
 };
