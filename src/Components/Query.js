@@ -1,12 +1,30 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { getImages } from '../actions/imageActions';
 
 const Query = props => {
+  const handleOnClick = () => {
+    const query = {
+      searchTerm: props.query
+    };
+    console.log(query);
+    props.getImages(query);
+  };
   return (
     <div className="query__container">
       <p>{props.query}</p>
-      <button className="query__button">Search</button>
+      <button onClick={handleOnClick} className="query__button">
+        Search
+      </button>
     </div>
   );
 };
 
-export default Query;
+const mapStateToProps = state => ({
+  images: state.images
+});
+
+export default connect(
+  mapStateToProps,
+  { getImages }
+)(Query);

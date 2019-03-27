@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { GET_IMAGES, SEARCH_TERM } from './types';
+import { GET_IMAGES, SEARCH_TERM, SAVE_QUERY } from './types';
 import unsplashAPI from '../config';
 
 export const getImages = state => dispatch => {
@@ -24,6 +24,12 @@ export const getImages = state => dispatch => {
 export const searchTerm = query => dispatch => {
   dispatch({
     type: SEARCH_TERM,
+    payload: query
+  });
+};
+export const saveQuery = query => dispatch => {
+  dispatch({
+    type: SAVE_QUERY,
     payload: query
   });
 };

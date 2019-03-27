@@ -7,11 +7,10 @@ import Image from './Image';
 export class Images extends Component {
   componentWillMount() {
     console.log(this.props.images);
-    // this.props.getImages(this.props.images);
   }
 
   renderImages = () => {
-    const { images, queries } = this.props.images;
+    const { images } = this.props.images;
     if (images.imgUrl) {
       return images.imgUrl.map(image => <Image key={image} url={image} />);
     }

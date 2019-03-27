@@ -1,4 +1,4 @@
-import { GET_IMAGES, SEARCH_TERM } from '../actions/types';
+import { GET_IMAGES, SEARCH_TERM, SAVE_QUERY } from '../actions/types';
 
 const initialState = {
   searchTerm: 'cats',
@@ -17,6 +17,11 @@ export default function(state = initialState, action) {
       return {
         ...state,
         queries: action.payload
+      };
+    case SAVE_QUERY:
+      return {
+        ...state,
+        queries: state.queries.concat(action.payload)
       };
     default:
       return state;

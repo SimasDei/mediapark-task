@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { searchTerm, getImages } from '../actions/imageActions';
+import { searchTerm, getImages, saveQuery } from '../actions/imageActions';
 
 export class Search extends Component {
   handleSubmit = e => {
@@ -10,6 +10,13 @@ export class Search extends Component {
     this.props.getImages(this.props.images);
     console.log(this.props.images.searchTerm);
   };
+
+  handleOnSave = () => {
+    const searchTerm = this.refs.search.value;
+    this.props.saveQuery(searchTerm);
+    console.log(this.props.images);
+  };
+
   render() {
     return (
       <div className="search__container item">
@@ -30,7 +37,11 @@ export class Search extends Component {
             <button className="search__button" type="submit">
               Search
             </button>
-            <button className="search__button" type="button">
+            <button
+              onClick={this.handleOnSave}
+              className="search__button"
+              type="button"
+            >
               Save
             </button>
           </div>
@@ -46,5 +57,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { searchTerm, getImages }
+  { searchTerm, getImages, saveQuery }
 )(Search);

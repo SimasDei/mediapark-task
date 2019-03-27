@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { saveQuery } from '../actions/imageActions';
 import Query from './Query';
 
 export class Queries extends Component {
   renderQueries = () => {
     const queries = this.props.images.queries;
+    console.log(queries);
     return queries.map(query => <Query key={query} query={query} />);
   };
   render() {
@@ -18,4 +20,7 @@ const mapStateToProps = state => ({
   images: state.images
 });
 
-export default connect(mapStateToProps)(Queries);
+export default connect(
+  mapStateToProps,
+  { saveQuery }
+)(Queries);
