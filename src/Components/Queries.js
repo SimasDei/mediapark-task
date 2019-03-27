@@ -6,7 +6,6 @@ import Query from './Query';
 export class Queries extends Component {
   renderQueries = () => {
     const queries = this.props.images.queries;
-    console.log(queries);
     return queries.map(query => <Query key={query} query={query} />);
   };
   render() {

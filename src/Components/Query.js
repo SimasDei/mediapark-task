@@ -7,7 +7,6 @@ const Query = props => {
     const query = {
       searchTerm: props.query
     };
-    console.log(query);
     props.getImages(query);
   };
   return (

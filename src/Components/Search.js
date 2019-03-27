@@ -8,13 +8,11 @@ export class Search extends Component {
     const searchTerm = this.refs.search.value;
     this.props.images.searchTerm = searchTerm;
     this.props.getImages(this.props.images);
-    console.log(this.props.images.searchTerm);
   };
 
   handleOnSave = () => {
     const searchTerm = this.refs.search.value;
     this.props.saveQuery(searchTerm);
-    console.log(this.props.images);
   };
 
   render() {

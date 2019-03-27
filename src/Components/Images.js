@@ -2,13 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getImages } from '../actions/imageActions';
 import Image from './Image';
-// import image from '../assets/dog.jpg';
 
 export class Images extends Component {
-  componentWillMount() {
-    console.log(this.props.images);
-  }
-
   renderImages = () => {
     const { images } = this.props.images;
     if (images.imgUrl) {

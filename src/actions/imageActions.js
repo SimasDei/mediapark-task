@@ -5,7 +5,6 @@ import unsplashAPI from '../config';
 export const getImages = state => dispatch => {
   const { ACCESS_KEY, API_ROOT } = unsplashAPI;
   const query = state.searchTerm;
-  console.log(query);
   axios
     .get(
       `${API_ROOT}/photos/random/?client_id=${ACCESS_KEY}&query=${query}&count=20`

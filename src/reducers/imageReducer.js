@@ -1,8 +1,8 @@
 import { GET_IMAGES, SEARCH_TERM, SAVE_QUERY } from '../actions/types';
 
 const initialState = {
-  searchTerm: 'cats',
-  queries: ['cats'],
+  searchTerm: 'dogs',
+  queries: ['dogs'],
   images: []
 };
 
